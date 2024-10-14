@@ -1,5 +1,5 @@
 CXX = g++-14
-CXXFLAGS = -Wall -std=c++23
+CXXFLAGS = -Wall -std=c++11
 BUILD_DIR = bin/build
 
 HEADERS = Point.hpp PointSimulator.hpp
