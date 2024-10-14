@@ -65,11 +65,13 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <ConfigurationType>Makefile</ConfigurationType>
     <RemoteRootDir>/mnt/b/it/c++/os/l1</RemoteRootDir>
+    <UseCompiler>false</UseCompiler>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <ConfigurationType>Makefile</ConfigurationType>
     <RemoteRootDir>/mnt/b/it/c++/os/l1</RemoteRootDir>
+    <UseCompiler>false</UseCompiler>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
@@ -101,6 +103,10 @@
     <ReBuildCommandLine>
     </ReBuildCommandLine>
     <LocalRemoteCopySources>false</LocalRemoteCopySources>
+    <AdditionalOptions>
+    </AdditionalOptions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <BuildCommandLine>
@@ -119,36 +125,34 @@
     <ReBuildCommandLine>
     </ReBuildCommandLine>
     <LocalRemoteCopySources>false</LocalRemoteCopySources>
+    <AdditionalOptions>
+    </AdditionalOptions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PointSimulator.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Makefile">
-      <FileType>Document</FileType>
-      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </RemoteCopyFile>
-      <RemoteCopyToOutputDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </RemoteCopyToOutputDir>
-      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </RemoteCopyFile>
-      <RemoteCopyToOutputDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </RemoteCopyToOutputDir>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ExcludedFromBuild>
-    </CustomBuild>
+    <ClInclude Include="Point.hpp" />
+    <ClInclude Include="PointSimulator.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile />
     <ClCompile>
-      <CppLanguageStandard>c++17</CppLanguageStandard>
+      <CppLanguageStandard>c++20</CppLanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile />
     <ClCompile>
-      <CppLanguageStandard>c++17</CppLanguageStandard>
+      <CppLanguageStandard>c++20</CppLanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
