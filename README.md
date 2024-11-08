@@ -1,8 +1,8 @@
-# STP_p6
+# OS_l1
 
 _Created for the course "Operating systems" V. N. Karazin Kharkiv National University_
 
-Ñ++11 Point Simulation and ArrayList program.
+C++11 Point Simulation and ArrayList program.
 
 ---
 
