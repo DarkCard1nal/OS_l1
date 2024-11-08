@@ -1,4 +1,5 @@
 #include "PointSimulator.hpp"
+#include <algorithm>
 
 PointSimulator::PointSimulator()
 {
